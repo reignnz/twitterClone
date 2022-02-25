@@ -1,0 +1,49 @@
+<h1> Welcome to TwitterClone! </h1>
+
+
+Login 
+<form action="/sessions" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>"> 
+
+  <div class="form-group">
+    <label for="email"> Email address </label>
+    <input type="email" class="form-control" id="email" name="login[email]" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted"> We will never share your email with anyone else.</small>
+  </div>
+  
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" name="login[password]" id="password" placeholder="Password">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
+
+Signup 
+<form action="/users" method="POST">
+
+  <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>"> 
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="name" class="form-control" id="name" name="user[name]" placeholder="Name">
+  </div>
+
+  <div class="form-group">
+    <label for="email"> Email address </label>
+    <input type="email" class="form-control" id="email" name="user[email]" aria-describedby="emailHelp" placeholder="Enter email">
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password" name="user[password]" placeholder="Password">
+  </div>
+
+  <div class="form-group">
+    <label for="confirmPassword">Password</label>
+    <input type="password" class="form-control" id="password_confirmation" name="user[password_confirmation]" placeholder="Confirm your password">
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
